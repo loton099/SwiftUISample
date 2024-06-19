@@ -9,6 +9,4 @@ jobs:
    steps: 
      - name: First Work Flow
      - run: echo "Sample Work flow Test"
-
-     - name: Second Work Flow
-     - run: echo "Testing"
+            echo "Testing"
