@@ -6,4 +6,4 @@ jobs:
   deploy:
    runs-on: macos-latest
    steps: 
-     -run: echo "Sample Work flow Test"
+     - run: echo "Sample Work flow Test"
