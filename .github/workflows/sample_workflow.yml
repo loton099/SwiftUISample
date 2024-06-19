@@ -1,0 +1,9 @@
+name: Basic Work Flow Example
+on:
+ workflow_dispatch:
+ 
+jobs:
+  deploy:
+   runs-on: macos-latest
+   steps: 
+     -run: echo "Sample Work flow Test"
