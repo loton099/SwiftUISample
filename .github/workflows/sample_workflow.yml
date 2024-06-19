@@ -7,6 +7,5 @@ jobs:
    name: Testing Work Flow
    runs-on: macos-latest
    steps: 
-     - name: First Work Flow
      - run: echo "Sample Work flow Test"
             echo "Testing"
