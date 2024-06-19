@@ -7,9 +7,9 @@ jobs:
    name: Testing Work Flow
    runs-on: macos-latest
    steps: 
-     - run: echo "Sample  Work flow Test"
-            local version_prefix
-            version_prefix = $(date + '%y.%m.%d')
-            local build_number_prefix
-            build_number_prefix = $(date + '%y%m%d')
-            echo "Version no is ${version_prefix} and Build no is ${build_number_prefix}"
+     - run: |
+            echo "Sample  Work flow Test"
+            VERSIONNUMBERPREFIX = $(date + "%y.%m.%d")
+            echo "Version no is $VERSIONNUMBERPREFIX"
+            BUILDNUMBERPREFIX = $(date + "%y%m%d")
+            echo "Build no is $BUILDNUMBERPREFIX"
