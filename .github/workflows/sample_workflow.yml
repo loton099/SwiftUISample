@@ -9,7 +9,7 @@ jobs:
    steps: 
      - run: |
             echo "Sample  Work flow Test"
-            VERSIONNUMBERPREFIX = $(date + "%y.%m.%d")
-            echo "Version no is $VERSIONNUMBERPREFIX"
-            BUILDNUMBERPREFIX = $(date + "%y%m%d")
-            echo "Build no is $BUILDNUMBERPREFIX"
+            VERSIONNUMBERPREFIX= $(date + "%y%m%d")
+            # echo "Version no is $VERSIONNUMBERPREFIX"
+            # BUILDNUMBERPREFIX = $(date + "%y%m%d")
+            # echo "Build no is $BUILDNUMBERPREFIX"
