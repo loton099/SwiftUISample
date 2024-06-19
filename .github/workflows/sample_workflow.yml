@@ -4,6 +4,11 @@ on:
  
 jobs:
   build:
+   name: Testing Work Flow
    runs-on: macos-latest
    steps: 
+     - name: First Work Flow
      - run: echo "Sample Work flow Test"
+
+     - name: Second Work Flow
+     - run: echo "Testing"
