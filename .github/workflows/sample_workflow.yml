@@ -3,7 +3,7 @@ on:
  workflow_dispatch:
  
 jobs:
-  deploy:
+  build:
    runs-on: macos-latest
    steps: 
      - run: echo "Sample Work flow Test"
