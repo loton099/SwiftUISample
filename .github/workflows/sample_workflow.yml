@@ -2,14 +2,15 @@ name: Basic Work Flow Example
 on:
  workflow_dispatch:
  
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true 
+  
 jobs:
-  build:
-   name: Testing Work Flow
+  create-release-branch:
    runs-on: macos-latest
    steps: 
-     - run: |
-            echo "Sample  Work flow Test"
-            VERSIONNUMBERPREFIX= $(date + "%y%m%d")
-            # echo "Version no is $VERSIONNUMBERPREFIX"
-            # BUILDNUMBERPREFIX = $(date + "%y%m%d")
-            # echo "Build no is $BUILDNUMBERPREFIX"
+     - name: Get Current Date
+       id: date
+       run:  echo "date=$(date +'%y.%m.%d')"
+            
