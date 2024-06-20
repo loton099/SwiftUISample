@@ -10,7 +10,13 @@ jobs:
   create-release-branch:
    runs-on: macos-latest
    steps: 
-     - name: Get Current Date
-       id: date
-       run:  echo "date=$(date +'%y.%m.%d')"
+     - name: Get Version Prefix from Current Date
+       run: echo "VERSION_PREFIX=$(date +'%y.%m.%d')" >> $GITHUB_ENV
+       
+     - name: Get Build Prefix from Current Date
+       run: echo "BUILDNUMBER_PREFIX=$(date +'%y%m%d')" >> $GITHUB_ENV
+       
+     - name: Use Build and Version no 
+       run: echo "Build no is $BUILDNUMBER_PREFIX and version is $VERSION_PREFIX" 
+      
             
